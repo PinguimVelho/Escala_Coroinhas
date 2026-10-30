@@ -14,8 +14,9 @@ body {
     justify-content: center;
     padding: 24px;
 
-    background: linear-gradient(135deg, #7a0000, #c41230, #8b0000);
-    color: #333;
+    /* Fundo mais suave e discreto */
+    background: linear-gradient(135deg, #59252d, #78323d, #51252d);
+    color: #333333;
 }
 
 /* Título principal */
@@ -23,105 +24,125 @@ h1 {
     color: #ffffff;
     text-align: center;
     font-size: 2rem;
+    line-height: 1.3;
     margin-bottom: 30px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
 }
 
 /* Caixa de login */
 h2 {
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
     background: #ffffff;
-    color: #a30000;
+    color: #702b36;
     text-align: center;
     font-size: 1.7rem;
-    padding: 25px 30px 10px;
+    padding: 28px 30px 16px;
     border-radius: 12px 12px 0 0;
-    border-top: 5px solid #d4a017;
+    border-top: 4px solid #c5a46d;
 }
 
 /* Formulário */
 form {
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
     background: #ffffff;
-    padding: 15px 30px 30px;
+    padding: 20px 30px 30px;
     border-radius: 0 0 12px 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
 }
 
 label {
     display: block;
-    margin-bottom: 8px;
-    color: #6b0000;
+    margin-bottom: 10px;
+    color: #383838;
+    font-size: 1.05rem;
     font-weight: bold;
 }
 
 input {
     width: 100%;
-    padding: 12px 14px;
-    margin-bottom: 18px;
-    border: 2px solid #e5d9bd;
+    min-height: 50px;
+    padding: 13px 14px;
+    margin-bottom: 22px;
+    border: 2px solid #c9c9c9;
     border-radius: 7px;
-    font-size: 1rem;
+    font-size: 1.05rem;
+    color: #292929;
+    background: #ffffff;
     outline: none;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder {
+    color: #707070;
 }
 
 input:focus {
-    border-color: #d4a017;
-    box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.2);
+    border-color: #843744;
+    box-shadow: 0 0 0 3px rgba(132, 55, 68, 0.15);
 }
 
 /* Botão de entrar */
 button {
     width: 100%;
-    padding: 13px;
+    min-height: 52px;
+    padding: 14px;
     margin-top: 5px;
     border: none;
     border-radius: 7px;
-    background: #b00020;
+    background: #843744;
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
+    transition: background-color 0.2s;
 }
 
 button:hover {
-    background: #d4a017;
-    color: #5c0000;
-    transform: translateY(-2px);
+    background: #682a35;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #c5a46d;
+    outline-offset: 3px;
 }
 
 button:active {
-    transform: translateY(0);
+    background: #54212a;
 }
 
 /* Link para cadastro */
 p {
-    margin-top: 22px;
+    margin-top: 24px;
     text-align: center;
     color: #ffffff;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 a {
-    color: #ffdf70;
+    color: #ffe0a0;
     font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s;
 }
 
 a:hover {
     color: #ffffff;
-    text-decoration: underline;
 }
 
 /* Ajustes para celulares */
 @media (max-width: 480px) {
+    body {
+        padding: 20px;
+    }
+
     h1 {
-        font-size: 1.6rem;
+        font-size: 1.65rem;
+        margin-bottom: 24px;
     }
 
     h2,
@@ -131,5 +152,19 @@ a:hover {
 
     h2 {
         font-size: 1.5rem;
+        padding: 24px 20px 14px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    label,
+    input {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
     }
 }
