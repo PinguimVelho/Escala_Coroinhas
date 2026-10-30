@@ -15,9 +15,13 @@ const srv = Bun.serve({
         "/user": {
             POST: async (req) => {
                 const body = await req.body?.json()
-                const query = db.query(`INSERT INTO users(username, password_hash) VALUES(:username, :password_hash)`)
+                const query = db.query(`INSERT INTO users(username, email, password_hash) VALUES(:username, :email, :password_hash)`)
                 const hash = await Bun.password.hash(body.password)
-                const data = query.run({ ":username": body.username, ":password_hash": hash })
+                const data = query.run({ 
+                    ":username": body.username, 
+                    ":email": body.email, 
+                    ":password_hash": hash 
+                })
                 return Response.json(data)
             }
         },
