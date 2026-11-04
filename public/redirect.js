@@ -40,7 +40,7 @@ if (cadastroForm) {
         })
         if (response.ok) {
             alert("Usuário Cadastrado!!");
-            window.location.href = "/"; // Agora vai redirecionar com segurança
+            window.location.href = "/";
         } else {
             const erro = await response.text();
             alert(`Erro no cadastro: ${erro}`);

@@ -1,0 +1,238 @@
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    padding: 24px;
+
+    background: linear-gradient(135deg, #7a0000, #c41230, #8b0000);
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Título principal */
+h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Perfil do usuário */
+.profile {
+    background: #ffffff;
+    color: #6b0000;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border-top: 4px solid #d4a017;
+    font-weight: bold;
+}
+
+/* Conteúdo principal */
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Botões gerais */
+button {
+    padding: 11px 16px;
+    margin: 5px 0;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #b00020;
+    color: #ffffff;
+
+    font-size: 0.95rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #d4a017;
+    color: #5c0000;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Botão criar escala */
+#createTable {
+    background: #d4a017;
+    color: #5c0000;
+    margin-bottom: 25px;
+    padding: 13px 20px;
+    font-size: 1rem;
+}
+
+#createTable:hover {
+    background: #ffdf70;
+}
+
+
+/* Container das escalas */
+#tablesContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 10px 5px 20px;
+    
+    scroll-behavior: smooth;
+}
+
+/* Barra de rolagem horizontal */
+#tablesContainer::-webkit-scrollbar {
+    height: 10px;
+}
+
+#tablesContainer::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+}
+
+#tablesContainer::-webkit-scrollbar-thumb {
+    background: #d4a017;
+    border-radius: 10px;
+}
+
+#tablesContainer::-webkit-scrollbar-thumb:hover {
+    background: #ffdf70;
+}
+
+/* Cartão de cada escala */
+.table-card {
+    flex: 0 0 340px;
+    width: 340px;
+    min-width: 340px;
+
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    border-top: 5px solid #d4a017;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Cabeçalho da escala */
+.table-header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+
+    padding: 12px;
+    margin-bottom: 15px;
+
+    background: #7a0000;
+    border-radius: 8px;
+    color: #ffffff;
+}
+
+/* Informações */
+.scale-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.scale-time {
+    color: #ffdf70;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.scale-coordinator {
+    font-size: 0.9rem;
+}
+
+/* Botões de ação */
+.table-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.table-actions button {
+    flex: 1;
+    padding: 9px 5px;
+    font-size: 0.78rem;
+}
+
+/* Tabela */
+.table-card table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-card th,
+.table-card td {
+    width: 50%;
+    padding: 11px 5px;
+    text-align: center;
+    border: 1px solid #e5d9bd;
+    font-size: 0.9rem;
+}
+
+.table-card thead {
+    background: #f3e5c2;
+    color: #6b0000;
+}
+
+.table-card tbody tr:nth-child(even) {
+    background: #fff9ed;
+}
+
+/* Botão adicionar */
+.btn-add {
+    width: 100%;
+    margin-top: 12px;
+    background: #7a0000;
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    #tablesContainer {
+        gap: 12px;
+    }
+
+    .table-card {
+        flex-basis: 290px;
+        width: 290px;
+        min-width: 290px;
+    }
+}
