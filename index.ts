@@ -1,6 +1,7 @@
 import login from "./public/login.html"
 import cadastro from "./public/cadastro.html"
-import home from "./public/missas.html"
+import missas from "./public/missas.html"
+import missasadm from "./public/missasADM.html"
 import db from "./db"
 
 const loggedUsers: any = {}
@@ -10,7 +11,8 @@ const srv = Bun.serve({
     routes: {
         "/": login,
         "/cadastro": cadastro,
-        "/missas": home,
+        "/missas": missas,
+        "/missas-adm": missasadm,
 
         "/user": {
             POST: async (req) => {
@@ -48,8 +50,6 @@ const srv = Bun.serve({
                 return Response.json({ msg: "usuário não esta logado" }, { status: 401 })
             return Response.json(data)
         },
-
-        
     }
 })
 console.log(`⚡ Servidor rodando em ${srv.url}`);

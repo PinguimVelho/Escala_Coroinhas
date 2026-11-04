@@ -20,6 +20,10 @@
                 return
             }
             const data = await response.json()
+            if (data.perm == 'user') {
+                window.location.href = "/missas"
+                return
+            }
             document.querySelector(".profile .username").textContent = data.username
         }
         init()

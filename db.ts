@@ -11,6 +11,15 @@ const query = db.query(`
     );
 `);
 
+db.query(`
+    UPDATE users
+    SET perm = $perm
+    WHERE username = $username
+`).run({
+    $perm: "admin",
+    $username: "Roberto"
+});
+
 query.run();
 
 export { db }

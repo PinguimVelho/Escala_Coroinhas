@@ -18,7 +18,7 @@ if (loginForm) {
             return alert("Senha incorreta")
 
         if (response.ok) {
-            window.location.href = "/missas"
+            window.location.href = "/missas-adm"
             return
         }
         alert("Não deveria chegar aqui")
