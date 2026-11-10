@@ -1,0 +1,229 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    padding: 24px;
+    background: linear-gradient(135deg, #7a0000, #c41230, #8b0000);
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Título principal */
+h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Perfil do usuário */
+.profile {
+    background: #ffffff;
+    color: #6b0000;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border-top: 4px solid #d4a017;
+    font-weight: bold;
+}
+
+/* Conteúdo principal */
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Container das escalas */
+#tablesContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 5px 20px;
+    scroll-behavior: smooth;
+}
+
+/* Barra de rolagem */
+#tablesContainer::-webkit-scrollbar {
+    height: 10px;
+}
+
+#tablesContainer::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+}
+
+#tablesContainer::-webkit-scrollbar-thumb {
+    background: #d4a017;
+    border-radius: 10px;
+}
+
+#tablesContainer::-webkit-scrollbar-thumb:hover {
+    background: #ffdf70;
+}
+
+/* Cartão da missa */
+.missa-card {
+    flex: 0 0 340px;
+    width: 340px;
+    min-width: 340px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    border-top: 5px solid #d4a017;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Data da missa */
+.missa-card h2 {
+    padding: 12px;
+    margin-bottom: 15px;
+    background: #7a0000;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+/* Informações da missa */
+.missa-card p {
+    margin-bottom: 9px;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* Título da lista */
+.missa-card h3 {
+    margin: 18px 0 10px;
+    color: #6b0000;
+    font-size: 1rem;
+}
+
+/* Lista de coroinhas */
+.coroinhas-list {
+    list-style: none;
+    border-top: 1px solid #e5d9bd;
+}
+
+.coroinhas-list li {
+    padding: 11px 8px;
+    border-bottom: 1px solid #e5d9bd;
+    font-size: 0.9rem;
+}
+
+.coroinhas-list li:nth-child(even) {
+    background: #fff9ed;
+}
+
+/* Campo de função */
+.missa-card input {
+    width: 100%;
+    padding: 11px;
+    margin-top: 15px;
+    border: 1px solid #d5c9b0;
+    border-radius: 7px;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.missa-card input:focus {
+    border-color: #d4a017;
+    box-shadow: 0 0 0 2px rgba(212, 160, 23, 0.2);
+}
+
+/* Botões */
+button {
+    width: 100%;
+    padding: 11px 16px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 7px;
+    background: #7a0000;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #d4a017;
+    color: #5c0000;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Botão de adicionar */
+.add-button {
+    background: #7a0000;
+}
+
+/* Botão de remover */
+.remove-button {
+    background: #a71919;
+}
+
+.remove-button:hover {
+    background: #d4a017;
+    color: #5c0000;
+}
+
+/* Mensagem de lista vazia */
+.empty-message {
+    width: 100%;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    border-top: 5px solid #d4a017;
+    color: #6b0000;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    header {
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    #tablesContainer {
+        gap: 12px;
+    }
+
+    .missa-card {
+        flex-basis: 290px;
+        width: 290px;
+        min-width: 290px;
+    }
+}

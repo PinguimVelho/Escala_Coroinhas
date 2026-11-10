@@ -3,26 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/missas.css">
+    <script src="missas.js" defer></script>
     <title>Escala GCA - Missas</title>
 </head>
 <body>
-    <h1>Missas</h1>
-    <div class="profile">
-        <img src="" alt="" class="thumb">
-        <div class="username">...</div>
-    </div>
-    <script>
-        async function init() {
-            const response = await fetch("/login/user")
-            if (!response.ok) {
-                alert("Usuário não logado")
-                window.location.href = "/"
-                return
-            }
-            const data = await response.json()
-            document.querySelector(".profile .username").textContent = data.username
-        }
-        init()
-    </script>
+    <header>
+        <h1>Missas</h1>
+
+        <div class="profile">
+            <span class="username">...</span>
+        </div>
+    </header>
+
+    <main>
+        <section id="tablesContainer"></section>
+    </main>
 </body>
 </html>
